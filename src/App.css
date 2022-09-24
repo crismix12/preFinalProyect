@@ -1,0 +1,49 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.userInput-container{
+  height: 100vh;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.input-container{
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.inputName-container{
+  display: flex;
+  gap: 5px;
+}
+
+
+
+.normalBackground{
+  background-color: red;
+}
+
+.normal{
+  background-color: red;
+}
+
+.bug{
+  background-color: darkgreen;
+}
+
+.fightingBackground{
+  background-color: teal;
+}
