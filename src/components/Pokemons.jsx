@@ -80,25 +80,21 @@ const Pokemons = () => {
         const searchPokemonType = (pokemonType) =>{
             // alert("buscando")
             // alert(pokemonType)
-            axios.get(`https://pokeapi.co/api/v2/type/${pokemonType}`)
-                // .then(res => setFilteredPokemons(res.data.pokemon.map(pokemon => pokemon.pokemon.url))) 
-                // .then(res => setPokemonsList(res.data.pokemon.map(pokemon => pokemon.pokemon.url))) 
-                //seteamos la estructura a una estructura similar para que pueda consumir nuevamente
-                //la lista de pokemones
-                .then(res => {
-                    setPokemonsList(res.data.pokemon.map(pokemon => pokemon.pokemon))
-                    setCurrentPage(1);
-                })
-                // .then(res => setPokemonsList(res.data.pokemon)) 
-            
-            // console.log(filteredPokemons[0].pokemon.url);
-            // console.log(filteredPokemons);
-
-            // setPokemonsList(filteredPokemons);
-
-            // console.log(pokemonsList);
-
-            // setBackgroundColor(pokemonType);
+            if(pokemonType !== ""){
+                axios.get(`https://pokeapi.co/api/v2/type/${pokemonType}`)
+                    // .then(res => setFilteredPokemons(res.data.pokemon.map(pokemon => pokemon.pokemon.url))) 
+                    // .then(res => setPokemonsList(res.data.pokemon.map(pokemon => pokemon.pokemon.url))) 
+                    //seteamos la estructura a una estructura similar para que pueda consumir nuevamente
+                    //la lista de pokemones
+                    .then(res => {
+                        setPokemonsList(res.data.pokemon.map(pokemon => pokemon.pokemon))
+                        setCurrentPage(1);
+                    })
+                    // .then(res => setPokemonsList(res.data.pokemon))               
+            }else{
+                axios.get('https://pokeapi.co/api/v2/pokemon/')
+                    .then(res => setPokemonsList(res.data.results))            
+            }
         }
         
     return (
@@ -133,7 +129,7 @@ const Pokemons = () => {
                 </div>
             </div>
 
-            <ul className='container d-flex flex-content flex-wrap'>
+            <ul className='pokemonCard-Container'>
                 {
                     // pokemonsList.map(pokemon => (
                     currentPokemons.map(pokemon => (

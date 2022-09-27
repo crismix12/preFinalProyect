@@ -17,6 +17,7 @@
   flex-direction: column;
   justify-content: center;
   /* align-items: center; */
+  row-gap: 50px;
 }
 
 .input-container{
@@ -30,24 +31,195 @@
   gap: 5px;
 }
 
-
-
-.normalBackground{
-  background-color: red;
+.userInputFooterImg{
+  /* margin-top: 30%; */
+  height: 25%;
 }
 
+.userInputFooterImg>img{
+  width: 150px;
+}
+
+.pokemonCard-Container{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0px;
+  /* background-color: red; */
+}
+
+.pokemon-item{
+  width: 100%;
+  height: 450px;
+  padding: 10px;
+}
+
+.pokemon-card{
+  position: relative;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .2);
+  border-radius: 2px solid black;
+  padding: 10px;
+  height: 100%;
+  text-align: center;
+  background-color: rgb(21, 31, 9);
+}
+
+.pokemon-card img{
+  width: 150px;
+  height: 150px;
+}
+
+.whiteContainer{
+  /* background-color: whitesmoke; */
+  background-color: rgba(255,255,255,0);
+  width: 100%;
+  height: 73%;
+  padding-top: 30px;
+  margin-top: -40px;
+  /* margin-top: 5px; */
+  /* text-align: center; */
+}
+
+.whiteContainer>h3{
+  margin-bottom: 0;
+  width: 70%;
+  margin-left: 15%;
+  color: whitesmoke;
+  /* font-size: x-large; */
+  font-weight: bold;
+  /* margin-top: 5px; */
+}
+
+.whiteContainer>p{
+  margin-bottom: 0;
+  /* margin-top: 5px; */
+  font-weight: bold;
+}
+
+.whiteContainer-type{
+  /* color: rgba(80, 80, 80, .9); */
+  color: rgba(205, 205, 205, 0.859);
+}
+
+.pokemonCard-stats{
+  display: flex;
+  justify-content: space-around;
+}
+
+.pokemonCard-stats p{
+  margin-bottom: 0;
+  padding: 3px;
+  color: rgba(205, 205, 205, 0.859);
+  font-weight: bold;
+}
+
+.pokemonCard-stats small{
+  color: whitesmoke;
+  font-size: large;
+  font-weight: bold;
+}
+
+
 .normal{
-  background-color: red;
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+.fighting{
+  background: rgb(131,58,180);
+  background: linear-gradient(0deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+.poison{
+  background: rgb(34,195,188);
+  background: linear-gradient(0deg, rgba(34,195,188,1) 0%, rgba(53,253,45,1) 100%);
+}
+
+.ground{
+  background: rgb(195,34,34);
+  background: linear-gradient(0deg, rgba(195,34,34,1) 0%, rgba(253,167,45,1) 100%);
+}
+
+.rock{
+  background: rgb(89,89,89);
+  background: linear-gradient(0deg, rgba(89,89,89,1) 0%, rgba(255,255,255,1) 100%);
 }
 
 .bug{
-  background-color: darkgreen;
+  background: rgb(0,36,18);
+  background: linear-gradient(0deg, rgba(0,36,18,1) 0%, rgba(9,121,88,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.ghost{
+  background: rgb(183,63,251);
+  background: linear-gradient(0deg, rgba(183,63,251,1) 0%, rgba(70,86,252,1) 100%); 
+}
+
+.steel{
+  background: rgb(238,238,174);
+  background: radial-gradient(circle, rgba(238,238,174,1) 0%, rgba(148,220,233,1) 100%);
+}
+
+.fire{
+  background: rgb(238,10,53);
+  background: linear-gradient(180deg, rgba(238,10,53,1) 0%, rgba(205,215,30,1) 100%);
 }
 
 .water{
-  background-color: darkgreen;
+  background: rgb(2,0,36);
+  background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
 }
 
-.fightingBackground{
-  background-color: teal;
+.grass{
+  background: rgb(15,15,1);
+  background: linear-gradient(0deg, rgba(15,15,1,1) 0%, rgba(31,245,2,1) 100%); 
+}
+
+.electric{
+  background: rgb(43,28,1);
+  background: linear-gradient(0deg, rgba(43,28,1,1) 0%, rgba(245,255,0,1) 100%);
+}
+
+.psychic{
+  background: rgb(141,161,0);
+  background: radial-gradient(circle, rgba(141,161,0,1) 0%, rgba(111,0,255,1) 100%);
+}
+
+.ice{
+  background: rgb(0,149,161);
+  background: radial-gradient(circle, rgba(0,149,161,1) 0%, rgba(0,22,255,1) 100%);
+}
+
+.dragon{
+  background: rgb(140,0,161);
+  background: radial-gradient(circle, rgba(140,0,161,1) 0%, rgba(215,252,99,1) 100%);
+}
+
+.dark{
+  background: rgb(0,0,0);
+  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.fairy{
+  background: rgb(214,214,189);
+  background: radial-gradient(circle, rgba(214,214,189,1) 0%, rgba(255,168,168,1) 100%); 
+}
+
+@media (min-width: 558px){
+  .pokemon-item{
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px){
+  .pokemon-item{
+    width: 33.33333%;
+  }
+}
+
+@media (min-width: 998px){
+  .pokemon-item{
+    width: 25%;
+  }
+
 }

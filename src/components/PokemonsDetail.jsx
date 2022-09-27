@@ -21,12 +21,14 @@ const PokemonsDetail = () => {
             .then(res => setPokemonDetails(res.data))
     }, [id])
 
-    console.log(pokemonDetails);
+    // console.log(pokemonDetails);
 
     return (
         <div>
             <h1>Pokemon con ID: {id}</h1>
             {pokemonDetails.name}
+            <hr />
+            <img src={pokemonDetails.sprites?.other["official-artwork"]["front_default"]} alt="" />
         </div>
     );
 };
