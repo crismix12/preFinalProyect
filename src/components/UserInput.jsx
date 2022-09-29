@@ -20,8 +20,8 @@ const UserInput = () => {
     return (
         <div className='userInput-container'>
             <img src="https://i.pinimg.com/originals/bd/cd/20/bdcd20f5411ee5785889542d303ad4cb.png" alt="" />
-            <h1>!Hola Entrenador!</h1>
-            <p>Para poder comenzar, dame tu nombre</p>
+            <h1>!Hi Trainer!</h1>
+            <p><b>Introduce your name, so we can begin...</b></p>
             <div className="input-container">
                 <div className="col-sm-7 inputName-container">
                     <input 
@@ -31,7 +31,7 @@ const UserInput = () => {
                         value={userName}
                         onChange = {e => setUserName(e.target.value)}
                         />
-                    <button className="btn btn-danger" onClick={dispatchUserName}>Comenzar</button>
+                    <button className="btn btn-danger" onClick={dispatchUserName}>Start</button>
                 </div>
             </div>
             <footer className='userInputFooterImg'>

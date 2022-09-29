@@ -62,6 +62,13 @@ const Pokemons = () => {
                     .then(res => setPokemonsList(res.data.results))            
             }
         }
+
+        const handleKeyDown = event => {
+            if (event.key === 'Enter') {
+              event.preventDefault();
+                navigate(`/pokemons/${nameInput}`)
+            }
+          };
         
     return (
         <div>
@@ -86,6 +93,7 @@ const Pokemons = () => {
                         placeholder='Search by name'
                         value={nameInput}
                         onChange={e => setNameInput(e.target.value)}
+                        onKeyDown={handleKeyDown}
                     />
                     <button onClick={searchName}>Search</button>
                 </div>
