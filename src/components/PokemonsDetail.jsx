@@ -2,18 +2,12 @@ import axios from 'axios';
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import ProgressBar from 'react-bootstrap/ProgressBar';
 
 const PokemonsDetail = () => {
 
-    //opcion alternativa utilizar useParams() resulta mas sencillo 
     const { id } = useParams();
-
-    // const id = useSelector(state => state.pokemonId)
-
-    // console.log(id);
 
     const navigate = useNavigate();
 
@@ -23,8 +17,6 @@ const PokemonsDetail = () => {
         axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`)
             .then(res => setPokemonDetails(res.data))
     }, [id])
-
-    // console.log(pokemonDetails);
 
     const goBack = () => {
         navigate(-1);

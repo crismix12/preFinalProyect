@@ -10,11 +10,9 @@
 
 .userInput-container{
   height: 100vh;
-  /* background-color: red; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
   row-gap: 50px;
   padding: 2rem;
   text-align: center;
@@ -32,7 +30,6 @@
 }
 
 .userInputFooterImg{
-  /* margin-top: 30%; */
   height: 25%;
 }
 
@@ -66,7 +63,6 @@
   text-align: left;
   margin-top: 1rem;
   font-size: larger;
-  /* padding-left: 3rem; */
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 1rem;
@@ -101,7 +97,6 @@
   flex-wrap: wrap;
   list-style: none;
   padding-left: 0px;
-  /* background-color: red; */
 }
 
 .hovercard{
@@ -179,14 +174,11 @@
 }
 
 .whiteContainer{
-  /* background-color: whitesmoke; */
   background-color: rgba(255,255,255,0);
   width: 100%;
   height: 73%;
   padding-top: 30px;
   margin-top: -40px;
-  /* margin-top: 5px; */
-  /* text-align: center; */
 }
 
 .whiteContainer>h3{
@@ -194,19 +186,15 @@
   width: 70%;
   margin-left: 15%;
   color: whitesmoke;
-  /* font-size: x-large; */
   font-weight: bold;
-  /* margin-top: 5px; */
 }
 
 .whiteContainer>p{
   margin-bottom: 0;
-  /* margin-top: 5px; */
   font-weight: bold;
 }
 
 .whiteContainer-type{
-  /* color: rgba(80, 80, 80, .9); */
   color: rgba(205, 205, 205, 0.859);
 }
 
@@ -244,8 +232,6 @@
 }
 
 .pokemonDetails-IdContainer{
-  /* border: 1px solid black; */
-  /* width: fit-content; */
   display: flex;
   justify-content: center;
 }
@@ -362,7 +348,6 @@
 .pokemonDetails-nav{
   display: flex;
   justify-content: flex-end;
-  /* margin-left: 1rem; */
 }
 
 .pokemonDetails-nav button{
@@ -495,12 +480,6 @@
     gap: 2rem;
   }
 }
-
-/* @media (min-width: 475px){
-  .pokemonDetails-backgroundContainer img{
-    left: 25%;
-  }
-} */
 
 @media (min-width: 768px){
   .pokemon-item{

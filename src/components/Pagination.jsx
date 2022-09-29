@@ -9,13 +9,11 @@ const Pagination = ({postsPerPage, totalPosts, paginate}) => {
 
     return (
         <nav>
-            {/* bootstrap classes style */}
             <ul className="pagination justify-content-center flex-wrap">
                 {
                     pageNumbers.map(number =>(
                         <li key={number} className="page-item" aria-current="page">
                             <a onClick={() => paginate(number)} className='page-link'>
-                            {/* <a href="!#" className='page-link'> */}
                                  {number}
                             </a>
                         </li>

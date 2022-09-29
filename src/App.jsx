@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 import { HashRouter, Route, Routes } from 'react-router-dom'
 import UserInput from './components/UserInput'
@@ -8,7 +6,6 @@ import Pokemons from './components/Pokemons'
 import ProtectedRoutes from './components/ProtectedRoutes'
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
     <HashRouter>
