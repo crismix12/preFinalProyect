@@ -14,20 +14,20 @@ const Pokemons = () => {
     const [pokemonsList, setPokemonsList] = useState([]);
     const [pokemonsTypes, setPokemonsTypes] = useState([]);
     // const [filteredPokemons, setFilteredPokemons] = useState([]);
-    const [cardBackground, setCardBackground] = useState("");
     const [background, setBackground] = useState("")
     const [nameInput, setNameInput] = useState("");
 
     useEffect (() =>{
         // https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1155
+// 
 
-        axios.get('https://pokeapi.co/api/v2/pokemon/')
-            .then(res => setPokemonsList(res.data.results))
+        // axios.get('https://pokeapi.co/api/v2/pokemon/')
+        axios.get('https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1155')
+        .then(res => setPokemonsList(res.data.results))
 
         axios.get('https://pokeapi.co/api/v2/type/')
             .then(res => {
                 setPokemonsTypes(res.data.results)
-                setCardBackground(res.data.results.map(type => type.name))
             })    
     },[])
 
@@ -37,8 +37,8 @@ const Pokemons = () => {
     
 
 
-    console.log(pokemonsList);
-    console.log(cardBackground);
+    // console.log(pokemonsList);
+    // console.log(cardBackground);
 
 
         //pagination
@@ -65,16 +65,9 @@ const Pokemons = () => {
             navigate(`/pokemons/${nameInput}`)
         }
 
-        // const setBackgroundColor = (pokemonType) =>{
-        //     switch (pokemonType){
-        //         case "normal":
-        //             setCardBackground("normalBackground")
-        //         break;
-        //         case "fighting":
-        //             setCardBackground("fightingBackground")
-        //         break;
-        //     }
-        // }
+        const returnLastPage = () => {
+            navigate(`/`)
+        }
 
 
         const searchPokemonType = (pokemonType) =>{
@@ -99,18 +92,29 @@ const Pokemons = () => {
         
     return (
         <div>
-            <h1>Pokemons</h1>
-            <p>Bienvenido {name}</p>
+            <header>
+                <section className='header-redSection'>
+                    <img src="https://i.pinimg.com/originals/bd/cd/20/bdcd20f5411ee5785889542d303ad4cb.png" alt="" />
+                </section>
+                <section className='header-blackSection'>
+                    <p>a</p>
+                </section>
+            </header>                 
+
+            <div className='welcomeContainer'>
+                <p>Welcome {name}, <span>here you can find your favorite pokemon</span></p>
+                <button onClick={returnLastPage}> Back <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/800px-Pokebola-pokeball-png-0.png" alt="" /></button>
+            </div>
             <div className='container d-flex flex-content justify-content-evenly'>
                 <div>
                     {/* para detectar el enter entonces podemos utilizar onKeyDown */}
                     <input 
                         type="text" 
-                        placeholder='buscar por nombre'
+                        placeholder='Search by name'
                         value={nameInput}
                         onChange={e => setNameInput(e.target.value)}
                     />
-                    <button onClick={searchName}>Search by name</button>
+                    <button onClick={searchName}>Search</button>
                 </div>
 
                 <div>

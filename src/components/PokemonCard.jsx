@@ -51,7 +51,7 @@ const PokemonCard = ( {url} ) => {
 
                     {/* <div className={`flex-item p-1 ${cardBackground ? cardBackground : pokemon.types?.[0].type.name }`}> */}
                     {/* <div className={`flex-item p-1 ${pokemon.types?.[0].type.name}`}> */}
-                    <div className={`pokemon-card ${pokemon.types?.[0].type.name}`}>
+                    <div className={`pokemon-card ${pokemon.types?.[0].type.name} hovercard`}>
                     {/* <div className={`flex-item p-1 ${cardBackground}`}> */}
                     {/* <div className={`flex-item p-1 ${background}`}> */}
                      {/* <img src={pokemon.sprites?.["front_default"]} alt="" /> */}
