@@ -13,8 +13,6 @@ const Settings = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    console.log(pokePerPage);
-
     const goBack = () =>{
         navigate(-1);
     }
