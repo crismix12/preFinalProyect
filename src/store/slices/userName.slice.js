@@ -7,7 +7,6 @@ export const userNameSlice = createSlice({
     reducers: {
         changeName: (state, action) => {
             const userName = action.payload;
-            // return "tommy"
             return userName
         } 
     }

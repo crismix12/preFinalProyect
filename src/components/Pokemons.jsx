@@ -9,6 +9,7 @@ import PokemonCard from './PokemonCard';
 const Pokemons = () => {
 
     const name = useSelector( state => state.userName)
+    const pokemonsPerPage = useSelector(state => state.pokemonsPerPage)
 
     const [pokemonsList, setPokemonsList] = useState([]);
     const [pokemonsTypes, setPokemonsTypes] = useState([]);
@@ -28,7 +29,7 @@ const Pokemons = () => {
 
         //pagination
         const [currentPage, setCurrentPage] = useState(1);
-        const [postsPerPage, setPostsPerPage] = useState(16);
+        const [postsPerPage, setPostsPerPage] = useState(Number(pokemonsPerPage));
     
         //getCurrentPosts
         const indexOfLastPost = currentPage * postsPerPage;
